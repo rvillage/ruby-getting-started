@@ -17,3 +17,9 @@
 
 # Ignore ruby-version
 /.ruby-version
+
+# Ignore gem
+/vendor/bundle
+
+# Ignore docker volume file
+/docker/postgresql/volume

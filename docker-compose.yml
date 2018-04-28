@@ -1,0 +1,21 @@
+version: '3'
+
+services:
+  db:
+    image: postgres:10.3-alpine
+    container_name: ruby-getting-started_db
+    environment:
+      TZ: Asia/Tokyo
+    ports:
+      - '127.0.0.1:5432:5432'
+    volumes:
+      - ./docker/postgresql/volume:/var/lib/postgresql/data
+
+  pgweb:
+    image: rvillage/pgweb:0.9-alpine
+    container_name: ruby-getting-started_pgweb
+    command: ["--url", "postgres://postgres:admin@db?sslmode=disable"]
+    ports:
+      - '8081:8081'
+    depends_on:
+      - db
