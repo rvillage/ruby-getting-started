@@ -1,10 +1,10 @@
 source 'https://rubygems.org'
-ruby '>= 2.3.5', '< 2.6'
+ruby '2.5.1'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails'
 # Use postgresql as the database for Active Record
-gem 'pg', '~> 0.18'
+gem 'pg'
 gem 'rails_12factor', group: :production
 # Use SCSS for stylesheets
 gem 'sass-rails'
@@ -37,4 +37,3 @@ gem 'puma'
 
 # Use debugger
 # gem 'debugger', group: [:development, :test]
-
